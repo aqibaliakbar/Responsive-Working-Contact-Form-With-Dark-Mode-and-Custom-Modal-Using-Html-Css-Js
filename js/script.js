@@ -36,27 +36,12 @@ const Send = () => {
   });
 };
 
-function toggleDarkMode() {
-  var body = document.body;
-  body.classList.toggle("dark");
-  // Update the mode text
-  let logo = document.getElementById("logo");
-  logo.src = body.classList.contains("dark")
-    ? "assets/LogoDark.svg"
-    : "assets/Logo.svg";
-
-  let toggle = document.getElementById("toggle");
-  toggle.className = body.classList.contains("dark")
-    ? "bx bx-sun bx-md"
-    : "bx bx-moon bx-md";
-}
-
 // Function to open the modal
 const openModal = (modalId) => {
   let modal = document.getElementById(modalId);
   modal.style.display = "block";
   // Close the modal if clicked anywhere outside the modal content
-  window.onclick = function (event) {
+  window.onclick =  (event) => {
     if (event.target == modal) {
       closeModal(modalId);
     }
@@ -74,8 +59,26 @@ const closeModal = (modalId, event) => {
 };
 
 // Attach the event listener to your close buttons
-document.querySelectorAll(".close").forEach(function (closeButton) {
-  closeButton.addEventListener("click", function (event) {
+document.querySelectorAll(".close").forEach( (closeButton) => {
+  closeButton.addEventListener("click", (event) => {
     closeModal("successModal", event);
   });
 });
+
+
+const toggleDarkMode = () => {
+  var body = document.body;
+  body.classList.toggle("dark");
+  // Update the mode text
+  let logo = document.getElementById("logo");
+  logo.src = body.classList.contains("dark")
+    ? "assets/LogoDark.svg"
+    : "assets/Logo.svg";
+
+  let toggle = document.getElementById("toggle");
+  toggle.className = body.classList.contains("dark")
+    ? "bx bx-sun bx-md"
+    : "bx bx-moon bx-md";
+}
+
+
