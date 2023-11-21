@@ -257,8 +257,8 @@ input[type="button"] {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid var(--primary-color);
-  width: 20%;
-  height: 40%;
+  width: 380px;
+  height: 380px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -353,8 +353,8 @@ input[type="button"] {
   }
 
   .modal-content {
-    width: 45%;
-    height: 35%;
+    width: 380px;
+    height: 380px;
     margin: 30% auto;
   }
   .modal-content-container h2,
@@ -384,8 +384,9 @@ input[type="button"] {
   }
 
   .modal-content {
-    width: 80%;
-    height: 40%;
+    width: 340px;
+    height: 360px;
+    margin: 60px auto;
   }
   .modal-content-container h2,
   .modal-content-container-1 h2 {
